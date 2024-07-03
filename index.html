@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="LRDiff.">
+  <meta name="keywords" content="Diffusion models,  Layout-to-Image">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DiffTalker</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title text-muted">
+            <span class="text-primary">߷</span>
+            <span class="text-dark">L</span>ayered <span class="text-dark">R</span>endering <span class="text-dark">Diff</span>usion Model for Controllable Zero-Shot Image Synthesis
+          </h1>
+          <p class="is-size-5 text-center">
+	            Received by "ECCV 2024"
+          </p>
+           <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?hl=en&user=KMEs58kAAAAJ&view_op=list_works&sortby=pubdate">Zipeng Qi*</a><sup>1</sup>,</span>
+            </span>
+             <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=mWW1RxUAAAAJ&hl=en&oi=sra">Fei Ye</a><sup>2</sup>,
+             </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=jBnA45cAAAAJ&hl=en">Chenyang Liu</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=q16Hy-sAAAAJ&hl=en">Guoxi Huang*</a><sup>2</sup>,
+            </span>
+          </div>
+           <div class="is-size-6 publication-authors">
+            <span class="author-block text-muted">qizipeng1107@gmail.com,</span>
+          </div>
+           <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Beihang University,</span>
+            <span class="author-block"><sup>2</sup>Mohamed bin Zayed University of Artificial Intelligence</span>
+            <span class="author-block"><sup>2</sup>University of Bristol</span>
+          </div>
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>Paper (coming soon)</span>
+                </a>
+              </span>
+
+              <span class="link-block">
+                <a href="code link"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code (coming soon)</span>
+                  </a>
+              </span>
+            </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <h2 class="title is-3">Layout-to-Image</h2>
+        <div class="content">
+          <img src="my_data/examples+editing2.pdf" width="90%"/>
+        </div>
+        </br>
+        <div class="content has-text-justified">
+            <p style="margin-bottom: 1em; text-indent: 0em;font-size: 20px; ">In this work, <strong>we mainly focus on the layout-to-image task</strong>.
+            As shown in the above figure (1), user input a layout condition, inclding
+            bounding boxes or instance mask and a caption. The proposed method can generate
+            a high-quality image that fits both the layout and the caption conditions.</p>
+            <p style="margin-bottom: 1em; text-indent: 0em;font-size: 20px; ">In addition, the proposed method <strong>also support edit a given image under a input layout condition</strong> (2), including
+            replacing an object at the specified location, inserting an object at the specified location and so on.
+        </div>
+        </br>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <h2 class="title is-3">Contributions</h2>
+        <div class="content has-text-justified">
+          <p style="margin-bottom: 1em; text-indent: 0em;font-size: 20px; "><strong>(1)</strong> We propose the Layered Rendering Diffusion for layout-to-image in a zero-shot manner, eliminating the need for training and complex constraint designs.
+            The proposed method can effectively circumvent issues like unintended conceptual blending or concept mismatches that happen during the generation of multiple concepts.</p>
+          <p style="margin-bottom: 1em; text-indent: 0em;font-size: 20px; "><strong>(2)</strong> We are the first to introduce the concept of visual guidance to achieve spatial controllability in noise space.</p>
+          <p style="margin-bottom: 1em; text-indent: 0em;font-size: 20px; "><strong>(3)</strong> Three applications are enabled by the proposed method: bounding box-to-image, instance mask-to-image, and image editing.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <h2 class="title is-3">Motivations</h2>
+        <div class="content">
+          <img src="my_data/diffusion_vis3.pdf" width="75%"/>
+        </div>
+        </br>
+        <div class="content has-text-justified">
+            <p style="margin-bottom: 1em; text-indent: 0em; font-size: 20px;"><strong>(1)</strong> The noise distribution inherently contains layout (or semantic) information. How can we adjust the noise to achieve a suitable distribution? The figure above provides an answer.
+              By adding a specific vector, such as a color CLIP vector related to the object description, to a specific area, we can generally generate the object within that area.
+
+            <p style="margin-bottom: 1em; text-indent: 0em; font-size: 20px;"><strong>(2)</strong> For different concepts, the specific vector in (1) can vary. We propose a layered strategy to handle multiple concepts effectively.
+        </div>
+        </br>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <h2 class="title is-3">Method overview</h2>
+        <div class="content">
+          <img src="my_data/pipeline2.pdf" width="90%"/>
+        </div>
+        </br>
+        <div class="content has-text-justified">
+            <p style="margin-bottom: 1em; text-indent: 0em; font-size: 20px;">The proposed <strong>vision guidance</strong>:</p>
+            <p style="margin-bottom: 1em; text-indent: 0em;">We factorise the vision guidance \( {\xi} \) into two components:
+              a vector \( \delta \in \mathbb{R}^{D} \) and a binary mask \( {\mathcal{M}} \in \{0,1\}^{h \times w} \). Each element \( \xi_{j,k,l} \) of \( {\xi} \) is defined as follows:
+              \[
+              \xi_{j,k,l} = \delta_l \cdot \mathcal{M}_{j,k} - \delta_l \cdot (1 - \mathcal{M}_{j,k}) , \\
+              = \delta_l \cdot (2\mathcal{M}_{j,k} - 1)
+              \]
+              where \( \mathcal{M}_{j,k} \) is assigned the value 1 if the spatial position \( ({j,k}) \) falls within the expected object region.
+              For the region containing an object, we add \( {\delta} \) to enhance the generation tendency of that object. Conversely, for areas outside the target region, we subtract
+              \( {\delta} \) to suppress the generation tendency of the object.
+              The binary mask \( {\mathcal{M}} \) can be derived from user input, such as converting a bounding box or instance mask provided by the user into the binary mask.
+            </p>
+          <p style="margin-bottom: 1em; text-indent: 0em;">
+            Next, we introduce two distinct approaches to compute the vector \( \delta \):<br>
+            (a) Constant vector: A nati\"ve approach for the configuration is to set the vector \( \delta \) to some constant values. When the diffusion model operates in the RGB space, we can set
+            \( \delta \) to constant values corresponding to some colour described by the text prompt (eg, [0.3, 0.3, 0.3]) corresponding to a white colour with transparency.
+            When operating in the latent space of VAE, \( \delta \) can be set to the latent representation of the constant values when operations such as dimension expansion and tensor repeat are required.
+            Although the manual adjustment \( \delta \) to some constant values is versatile to generate objects with various visual concepts, it necessitates human intervention.
+          </p>
+           <p style="margin-bottom: 1em; text-indent: 0em;">
+            (b) Dynamic vector: Beyond simply assigning constant values to \( \delta \), we propose to dynamically adapt the values of \( \delta \) based on the input text conditions in order to reduce human intervention during generation. In this context, we consider the implementation of Stable Diffusion wherein text tokens are interconnected with the visual features via cross-attention modules.
+            At the initial denoising step, ie, \( t=T \), we extract the cross-attention map \( \mathbf{A} \in \mathbb{R}^{|c| \times hw} \) from an intermediate layer in the U-Net. For a more straightforward illustration, we will consider the synthesis of an image containing a single object, corresponding to the \( i_{th} \) text token from the text prompt \( c \). Subsequently, to derive the vector \( \delta \), we perform the following operations:
+            \[
+            \begin{aligned}
+                S &= \{(j,k)| \mathbf{A}_{j,k}^i > \mathrm{Threshold}_K(\mathbf{A}^i)\},\\
+                \delta  &= \frac{\lambda}{|S|}\sum \{ \mathbf{x}_t (j,k)| (j,k) \in S\}
+            \end{aligned}
+            \]
+            where \( x_t (j,k) \) denotes the element at spatial location \( (j,k) \) in \( x_t \). The \( \sum \) operation sums up all items within the \( S \) set. Additionally, the operation \( \mathrm{Threshold}_K(\cdot) \) selects the \( K_{th} \) largest value from the top \( K \) values in \( \mathbf{A}^i \).
+            The strength of vision guidance is modulated by the coefficient \( \lambda \), alongside the classifier-free guidance coefficient \( \gamma \). Given the presence of multiple cross-attention blocks within the score network, we opt to select the block following the down-sampling in each stage and subsequently average their outputs.
+          </p>
+
+          <p style="margin-bottom: 1em; text-indent: 0em; font-size: 20px;">The <strong>pipeline</strong> of the method:</p>
+            <p style="margin-bottom: 1em; text-indent: 0em;"><strong></strong> For synthesising a sense, the user provides the global caption, layered caption as well as the spatial layout entities which are used to construct the vision guidance. LRDiff divides the reverse-time diffusion process into two sections:</p>
+            <p style="margin-bottom: 1em; text-indent: 0em;"><strong>(i)</strong> When \( t \geq t_0 \), each vision guidance is employed into separate layers to alter the denoising direction, ensuring each object contour generates within specific regions.</p>
+            <p style="margin-bottom: 1em; text-indent: 0em;"><strong>(ii)</strong> When \( t < t_0 \), we perform the general reverse diffusion process to generate texture details that are consistent with the global caption.</p>
+        </div>
+        </br>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <h2 class="title is-3">Results display</h2>
+        <div class="content">
+          <p style="margin-bottom: 1em; text-indent: 0em; font-size: 22px;"><strong>The results under instance mask condition</strong>
+          <img src="my_data/mask_results2.pdf" width="100%"/>
+          <p style="margin-bottom: 1em; text-indent: 0em; font-size: 22px;"><strong>The results under bounding box condition</strong>
+          <img src="my_data/box3_results2.pdf" width="100%"/>
+        </div>
+        </br>
+        <div class="content has-text-justified">
+          <p>
+
+          </p>
+          </br>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>
+      coming soon
+</code></pre>
+  </div>
+</section>
+
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            Website template borrowed from <a href="https://github.com/nerfies/nerfies.github.io">NeRFies</a> and <a href="https://github.com/nesf3d/nesf3d.github.io">NeSF</a>. 
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
